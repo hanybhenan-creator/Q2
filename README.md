@@ -57,7 +57,7 @@
 | **الكسور** | المربع شبكة لا خط: الكسر بين 144 و145 لا داخلهما — §19 |
 | ميكولا | الكتابان: تحويل السعر إلى طول، ومربع التسعة، ودورة المكعب — ورصد تعارض الخريطتين §18 |
 | آلات تطوير الأفكار | ست أدوات مقيَّمة في §16 من `03`: `stumpy` · `ruptures` · `alphalens` · `skill-backtest-overfit` · `purged-CV` · مرجع الكواكب |
-| الكود | عشرة ملفات في `tools/`: ثلاثة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude`)، وسبعة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse`) |
+| الكود | أحد عشر ملفًا في `tools/`: ثلاثة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude`)، وثمانية للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve`) |
 
 ---
 
@@ -73,6 +73,7 @@
 | [`tools/egx_activity_rotation.py`](tools/egx_activity_rotation.py) | هل يدور النشاط بين الأسهم؟ ارتباط الرتب +0.888 سنة/سنة — أى ثبات لا دوران — §17.3 من `04` |
 | [`tools/egx_selection_rule.py`](tools/egx_selection_rule.py) | قاعدة جان «قمم أعلى وقيعان أعلى»: +1.80 نقطة لكل 6 أشهر، وt=+0.72 — اتجاه لا دليل — §17.9 |
 | [`tools/egx_pulse.py`](tools/egx_pulse.py) | نبض السهم: φ=360·log₁₀ P، وω هو الثابت الوحيد تحت المضاعفة؛ والدورة 310 أيام وسيطًا — والتكدّس عند 45° أثر عتبة الكشف — §14.9 |
+| [`tools/gann_sieve.py`](tools/gann_sieve.py) | **المصفاة**: دائرة 360 لكل حملة (تربيع المدى)، وطاقة الرقم والزمن من قواعد الكتاب — درجة ترتيب، لا إشارة مثبتة — §18 |
 
 ---
 
