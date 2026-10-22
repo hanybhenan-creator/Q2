@@ -47,7 +47,8 @@ def load(csv_path, since, min_rows):
     out = {}
     for t, v in by.items():
         v.sort()
-        if len(v) >= min_rows:
+        # كل ما يبدأ بـ EGX مؤشر سوق لا سهم — يستبعد وإلا دخل الزمر كطرف.
+        if len(v) >= min_rows and not t.upper().startswith("EGX"):
             out[t] = v
     return out
 
