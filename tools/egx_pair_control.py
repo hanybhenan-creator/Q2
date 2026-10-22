@@ -137,15 +137,18 @@ def main():
     d2 = np.log([B[k][2] for k in common])
 
     print(f"أسهم: {len(data)} · أزواج مشتركة: {len(common):,}\n")
+    rng = np.random.default_rng(99)
     print("═══ ارتباط النصفين بعد نزع كل ملوِّث ═══")
     for tag, cols in [("خام", []),
                       ("الكثافة", [d2]),
                       ("تشابه العوائد", [c2]),
                       ("الاثنان", [d2, c2])]:
         r = np.corrcoef(resid(y1, cols), resid(y2, cols))[0, 1]
-        print(f"  {tag:16} r = {r:+.3f}")
+        perm = np.array([np.corrcoef(resid(y1, cols),
+                       resid(y2, cols)[rng.permutation(len(common))])[0, 1]
+                         for _ in range(300)])
+        print(f"  {tag:16} r = {r:+.3f}   p = {np.mean(np.abs(perm) >= abs(r)):.3f}")
 
-    rng = np.random.default_rng(99)
     r1, r2_ = resid(y1, [d2, c2]), resid(y2, [d2, c2])
     obs = np.corrcoef(r1, r2_)[0, 1]
     sh = np.array([np.corrcoef(r1, r2_[rng.permutation(len(r2_))])[0, 1]
