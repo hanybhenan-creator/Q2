@@ -57,7 +57,7 @@
 | **الكسور** | المربع شبكة لا خط: الكسر بين 144 و145 لا داخلهما — §19 |
 | ميكولا | الكتابان: تحويل السعر إلى طول، ومربع التسعة، ودورة المكعب — ورصد تعارض الخريطتين §18 |
 | آلات تطوير الأفكار | ست أدوات مقيَّمة في §16 من `03`: `stumpy` · `ruptures` · `alphalens` · `skill-backtest-overfit` · `purged-CV` · مرجع الكواكب |
-| الكود | ستة ملفات في `tools/`: ثلاثة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude`)، وثلاثة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control`) |
+| الكود | سبعة ملفات في `tools/`: ثلاثة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude`)، وأربعة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test`) |
 
 ---
 
@@ -69,6 +69,7 @@
 | [`tools/egx_load.py`](tools/egx_load.py) | يكتشف نسخ الأرشيف الثلاث، ويختار الأحدث لكل سهم، ويُخرج السلسلة النظيفة، ويطبع فحص الشمعة والتقويم — §5.4 من `02` |
 | [`tools/egx_calendar.py`](tools/egx_calendar.py) | كشف الانعطافات بارتداد نسبى، واختبار التزامن بإزاحة دورية، واختبار الدورية بضجيج أحمر AR(1) — §14 من `03` |
 | [`tools/egx_pair_control.py`](tools/egx_pair_control.py) | الضبط على «زمرة التقويم»: هل يبقى تزامن الزوج بعد نزع كثافة السهم وتشابه عوائده؟ الجواب: لا — §14.3.2 |
+| [`tools/egx_astro_test.py`](tools/egx_astro_test.py) | الاختبار الفلكى: هل تقع الانعطافات عند زوايا الكواكب (15 زوجًا · 9 زوايا)؟ الجواب: 0.6% فرقًا عن الضابط — §14.8 |
 
 ---
 
