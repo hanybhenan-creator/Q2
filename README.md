@@ -57,7 +57,7 @@
 | **الكسور** | المربع شبكة لا خط: الكسر بين 144 و145 لا داخلهما — §19 |
 | ميكولا | الكتابان: تحويل السعر إلى طول، ومربع التسعة، ودورة المكعب — ورصد تعارض الخريطتين §18 |
 | آلات تطوير الأفكار | ست أدوات مقيَّمة في §16 من `03`: `stumpy` · `ruptures` · `alphalens` · `skill-backtest-overfit` · `purged-CV` · مرجع الكواكب |
-| الكود | ثمانية ملفات في `tools/`: ثلاثة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude`)، وخمسة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation`) |
+| الكود | تسعة ملفات في `tools/`: ثلاثة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude`)، وستة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule`) |
 
 ---
 
@@ -71,6 +71,7 @@
 | [`tools/egx_pair_control.py`](tools/egx_pair_control.py) | الضبط على «زمرة التقويم»: هل يبقى تزامن الزوج بعد نزع كثافة السهم وتشابه عوائده؟ الجواب: لا — §14.3.2 |
 | [`tools/egx_astro_test.py`](tools/egx_astro_test.py) | الاختبار الفلكى: هل تقع الانعطافات عند زوايا الكواكب (15 زوجًا · 9 زوايا)؟ الجواب: 0.6% فرقًا عن الضابط — §14.8 |
 | [`tools/egx_activity_rotation.py`](tools/egx_activity_rotation.py) | هل يدور النشاط بين الأسهم؟ ارتباط الرتب +0.888 سنة/سنة — أى ثبات لا دوران — §17.3 من `04` |
+| [`tools/egx_selection_rule.py`](tools/egx_selection_rule.py) | قاعدة جان «قمم أعلى وقيعان أعلى»: +1.80 نقطة لكل 6 أشهر، وt=+0.72 — اتجاه لا دليل — §17.9 |
 
 ---
 
