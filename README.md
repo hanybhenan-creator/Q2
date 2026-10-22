@@ -56,8 +56,9 @@
 | **الخريطة الدائرية** | 24 خلية × 15°، 0° عند 290، والطول الفلكى = الموضع + 240° — §20 |
 | **الكسور** | المربع شبكة لا خط: الكسر بين 144 و145 لا داخلهما — §19 |
 | ميكولا | الكتابان: تحويل السعر إلى طول، ومربع التسعة، ودورة المكعب — ورصد تعارض الخريطتين §18 |
+| **منهج ميكولا — التحقق** | نُفِّذ كاملًا على 939,558 صفًا: الحساب يصح (4 أمثلة، 0.3°–1.5°) والفرز صفر · والسعة وحدها 95.4% — §19 من `04` |
 | آلات تطوير الأفكار | ست أدوات مقيَّمة في §16 من `03`: `stumpy` · `ruptures` · `alphalens` · `skill-backtest-overfit` · `purged-CV` · مرجع الكواكب |
-| الكود | اثنا عشر ملفًا في `tools/`: ثلاثة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude`)، وتسعة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles`) |
+| الكود | ثلاثة عشر ملفًا في `tools/`: أربعة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude` · `mikula_verify`)، وتسعة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles`) |
 
 ---
 
@@ -75,6 +76,7 @@
 | [`tools/egx_pulse.py`](tools/egx_pulse.py) | نبض السهم: φ=360·log₁₀ P، وω هو الثابت الوحيد تحت المضاعفة؛ والدورة 310 أيام وسيطًا — والتكدّس عند 45° أثر عتبة الكشف — §14.9 |
 | [`tools/gann_sieve.py`](tools/gann_sieve.py) | **المصفاة**: دائرة 360 لكل حملة (تربيع المدى)، وطاقة الرقم والزمن من قواعد الكتاب — درجة ترتيب، لا إشارة مثبتة — §18 |
 | [`tools/gann_cycles.py`](tools/gann_cycles.py) | أطوال الاقتران الفلكى محسوبة: المريخ‑المشترى **2.236 سنة** لا 20 · و9× = 20.12 ≈ المشترى‑زحل · والتداخل الداخلى — §14.10 |
+| [`tools/mikula_verify.py`](tools/mikula_verify.py) | **التحقق الكامل من منهج ميكولا**: الخرائط الأربع واللفّات لكل عقد · أمثلة المصدر على الرصد · الشبكة والأوجه عند 14,039 انعطافًا بضابط · سعة البحث · تربيع السعر والزمن — §19 من `04` |
 
 ---
 
