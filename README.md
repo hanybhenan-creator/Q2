@@ -61,8 +61,9 @@
 | **السرعة والقانون** | `f = v/(1+v)` مشتقة، والشمس تعطى 1/2 بالضبط · 3 و7 من الطرفين · والسهم 1.65°/يوم — لا يكمّم عند الكسور — §21 من `04` |
 | **القمر** | النموذج مضبوط على كسوف 2026-08-12 بـ0.02° · الطور لا يفسّر شيئًا · والسرعة تقول عكس القول الشائع — §22 من `04` |
 | **خطابا جان الفلكى** | الفلكى صحيح (5/6 داخل 1°) · 8253 = درجات الشمس بالضبط · خط 45° = 360/سنة · والمقياس وحدَه حرّ: 83.7% تجد وجهًا — `tools/gann_letters.py` §23 من `04` |
+| **مقياس كل كوكب** | `θ = P ÷ s` · و`s = 1/v = الدورة÷360` · و1 و12 و30 هى الشمس‑المشترى‑زحل · وكلها تعنى «نقطة = يوم» فتُلغى من الطرفين — §24 من `04` |
 | آلات تطوير الأفكار | ست أدوات مقيَّمة في §16 من `03`: `stumpy` · `ruptures` · `alphalens` · `skill-backtest-overfit` · `purged-CV` · مرجع الكواكب |
-| الكود | سبعة عشر ملفًا في `tools/`: سبعة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude` · `mikula_verify` · `heliocentric_law` · `moon_price` · `gann_letters`)، وعشرة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles` · `holdout`) |
+| الكود | ثمانية عشر ملفًا في `tools/`: ثمانية للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude` · `mikula_verify` · `heliocentric_law` · `moon_price` · `gann_letters` · `planet_scale`)، وعشرة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles` · `holdout`) |
 
 ---
 
@@ -85,6 +86,7 @@
 | [`tools/heliocentric_law.py`](tools/heliocentric_law.py) | السرعات الهليوسنتريكية، واشتقاق `f=v/(1+v)` و`f=1/(1+T)`، وجدول الكواكب على الكسور، وسرعة السهم واختبار الارتدادات — §21 من `04` |
 | [`tools/moon_price.py`](tools/moon_price.py) | طول القمر وطوره بنموذج مضبوط على كسوف 2026-08-12؛ والاختبارات الأربعة: العائد، والانعطافات، والطيف، والأوجه — §22 من `04` |
 | [`tools/gann_letters.py`](tools/gann_letters.py) | تحقيق خطابى البنّ والصويا الفلكى: الفلكى مقابل المحسوب، واستعادة الأرقام من علاقاتها، والآلة الستّية، وقياس حرّية المقياس (23 مقياسًا) — §23 من `04` |
+| [`tools/planet_scale.py`](tools/planet_scale.py) | التحويل `θ=P÷s`، والمقياس الطبيعى `s=1/v` لكل كوكب، وهُوية «نقطة = يوم»، وشهادة القهوة (1.0017)، واختبار القُطر مقابل خارج القطر — §24 من `04` |
 
 ---
 
