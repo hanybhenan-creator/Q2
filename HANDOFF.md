@@ -238,6 +238,7 @@ docs/16-degree-cycle.md       ★ الشمعة الفلكية: ٣٦٠ درجة/�
 docs/17-gann-method.md        ★ منهج جان من نصّه المصوَّر: الخطوات الأربع · والشمس ساعة
 docs/18-technical-foundations.md  ★ أصول التحليل الفنى · القاع الرئيسى والفرعى
 docs/19-price-to-number.md     ★ السعر→رقم · متى الشمس ومتى كوكب · التغطية ١٧٥%
+docs/20-mikula-method.md        ★ ١/٨ للأسهم · قاعدة السرعة ١:١ · الكتب ليست هنا
 docs/sources/times-of-the-bible-1667-en.txt  ★ نصّ ١٦٦٧ الإنجليزى (٧٨ ص) — **يُقتبس** ويُقفل آليًّا
 docs/sources/times-of-the-bible-1667.txt     النسخة العربية الآلية — للمقارنة لا للاقتباس
 README.md                     الخريطة والصفوف
@@ -264,6 +265,7 @@ README.md                     الخريطة والصفوف
 | `price_time_square.py` | ★ الخطوات الأربع من خطاب ١٩٥٤ · إرساء على قاع · درجات غير مختزلة · الشمس مقابل الزمن | `python3 tools/price_time_square.py` |
 | `gann_pivots.py` | ★ عشرة شروط من النصّ · ١ وحدة سعر = ١٥° · قاع رئيسى/فرعى · تجاور · حملات | `python3 tools/gann_pivots.py` |
 | `price_number.py` | ★ العجلات الثلاث · الشمس للزمن والكواكب للسعر · حساب التغطية والتزاحم | `python3 tools/price_number.py` |
+| `mikula_velocity.py` | ★ ثبات نسبة سرعة السعر إلى الكوكب (١:١) — ١٢ سهمًا | `python3 tools/mikula_velocity.py` |
 
 **`circle_one_stock.py` يقبل:** `--factor` (لتقدير السعر الخام) · `--money` (الوحدة قرش) · `--from` (للفصل عن مقطع معدَّل) · `--bottom` · `--major 0.40`.
 
