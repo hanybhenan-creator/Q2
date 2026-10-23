@@ -1,7 +1,8 @@
 # HANDOFF — برومبت الوكيل التالى
 
 > **هذا ملفُ تسليمٍ لا بحث.** اقرأه كاملًا قبل أى أداة. فيه: ما ثبت، وما سقط، وما لا يُعاد،
-> والبيئة التى تُصفَّر. المستودع: `hanybhenan-creator/Q2` · الفرع: **`arena/f18907ba-q2`** · HEAD: **`1af07a0`** (مدمجٌ فى `main`).
+> والبيئة التى تُصفَّر. المستودع: `hanybhenan-creator/Q2` · الفرع: **`arena/f16955ac-q2`** · HEAD: **`2527c5e`**
+> (وهو نفس مضمون `main` عند `07547f3` — الملف مطابقٌ بايتًا ببايت، md5 `8367cea4`).
 
 ---
 
@@ -43,7 +44,7 @@
 البيئة أُعيدت **مرات** خلال هذه الجلسة. عند بدء العمل تحقّق فورًا:
 
 ```bash
-cd /home/user/Q2 && git log --oneline -1        # يجب أن يكون 0cf5f34 أو أحدث
+cd /home/user/Q2 && git log --oneline -1        # يجب أن يكون 2527c5e
 python3 -c "import numpy" || pip install --break-system-packages --user numpy
 ls -la /tmp/egx_clean.csv                       # غالبًا مفقود بعد التصفير
 ```
@@ -52,7 +53,7 @@ ls -la /tmp/egx_clean.csv                       # غالبًا مفقود بعد
 
 ```bash
 git fetch origin
-git reset --mixed origin/arena/f18907ba-q2
+git reset --mixed origin/main
 ```
 
 ### إعادة بناء البيانات (مطلوبة دائمًا بعد التصفير)
@@ -65,7 +66,8 @@ git reset --mixed origin/arena/f18907ba-q2
 cd /home/user/Q2
 for i in 01 02 03 04 05 06 07 08; do cp "market last price_part$i.TXT" "/tmp/egxdata/part$i.csv"; done
 python3 tools/egx_load.py --dir /tmp/egxdata --out /tmp/egx_clean.csv
-# ⇒ 960,600 صفًا · 286 سهمًا · 1998-01-01 → 2025-10-27
+# ⇒ 960,600 صفًا · 286 سهمًا · 1970-01-01 → 2025-10-27
+# (والبداية 1970 صفٌّ واحد شاذّ؛ أوّل سوقٍ حقيقى 1998)
 ```
 
 **(وإن لم تكن الملفات فى نسختك، فاستخرجها من كائنات Git: `git rev-list --objects --all | grep part01`.)**
