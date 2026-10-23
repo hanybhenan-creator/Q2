@@ -14,7 +14,7 @@
 | [`03-measurement.md`](docs/03-measurement.md) | **نظام القياس** | الوحدة · 1:1 · مربع التسعة · الكسور · الخريطة الدائرية · ثبات الرقم · الصورة · السلاسل · تعارض الخرائط · الشمس والدورات · **تقويم السهم — تحقيق المصادر ثم القياس** |
 | [`04-selection-engine.md`](docs/04-selection-engine.md) | **محرك الاختيار** | الصحيفة كانت الماسح · الأبعاد الستة · **الهندسة تحدد الخطر لا التنبؤ** · منهجية جان · جنكينز · **الآلية من ثلاثة أنظمة مفتوحة** · التجارب |
 | [`05-output-decisions.md`](docs/05-output-decisions.md) | المخرج والقرارات | ما يُسلَّم · الخطر · المحسوم والمفتوح · ما سُحب |
-| [`06-price-planet-scale.md`](docs/06-price-planet-scale.md) | **تحويل السعر والمقياس** | المعادلات م١–م٥ · المقياس المشتق لكل كوكب · والاختبار الحاسم على 253 سهمًا: صفر · والبحث عن مقياس لكل سهم خارج العينة |
+| [`06-price-planet-scale.md`](docs/06-price-planet-scale.md) | **تحويل السعر والمقياس** | المعادلات م١–م٥ · المقياس المشتق · الاختبار الحاسم على 253 سهمًا: صفر · **§8 لا يُربط السهم بكوكب** · §9 مثال كامل (أُبطل) · **§10 سعر البن 8729 = 87.29 سنتًا مُتحقَّقًا** · **§11 الأرشيف مُعدَّل: رقم السهم ≠ رقم السوق** · **§12 فحص CIB: الرقم مجهول بفارق الضِعف** |
 | [`07-corrections.md`](docs/07-corrections.md) | **سجل تصحيح**: خطأان «مطبعيان» ادّعيتُهما عند جان ولم يكونا — ومفتاح الصويا 15°/سنت الذى أسقطتُه · وقاعدة «لا خطأ فى مصدر قبل استنفاد مفاتيحه» |
 
 **03 يقول بماذا نقيس · 04 يقول كيف نختار · 06 يقول بماذا يُحوَّل السعر.** ولا تُقرأ إحداها بدل الأخرى.
@@ -66,7 +66,7 @@
 | **مقياس كل كوكب** | `θ = P ÷ s` · و`s = 1/v = الدورة÷360` · و1 و12 و30 هى الشمس‑المشترى‑زحل · وكلها تعنى «نقطة = يوم» فتُلغى من الطرفين — §24 من `04` |
 | **المقياس — الاختبار الحاسم** | `s = 1/v` يُطبَّق على 253 سهمًا: **20.0/19.7/19.7/17.4/19.6%** مقابل صدفة **20.0%** · والبحث عن مقياس لكل سهم: 26.8% تدريبًا ← **19.8%** تحقّقًا — [`docs/06`](docs/06-price-planet-scale.md) |
 | آلات تطوير الأفكار | ست أدوات مقيَّمة في §16 من `03`: `stumpy` · `ruptures` · `alphalens` · `skill-backtest-overfit` · `purged-CV` · مرجع الكواكب |
-| الكود | عشرون ملفًا في `tools/`: عشرة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude` · `mikula_verify` · `heliocentric_law` · `moon_price` · `gann_letters` · `planet_scale` · `scale_holdout` · `letter_keys`)، وعشرة للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles` · `holdout`) |
+| الكود | اثنان وعشرون ملفًا في `tools/`: عشرة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude` · `mikula_verify` · `heliocentric_law` · `moon_price` · `gann_letters` · `planet_scale` · `scale_holdout` · `letter_keys`)، واثنا عشر للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles` · `holdout` · `stock_planet_binding` · `circle_one_stock`) |
 
 ---
 
@@ -105,6 +105,8 @@
 | [`tools/gann_letters.py`](tools/gann_letters.py) | تحقيق خطابى البنّ والصويا الفلكى: الفلكى مقابل المحسوب، واستعادة الأرقام من علاقاتها، والآلة الستّية، وقياس حرّية المقياس (23 مقياسًا) — §23 من `04` |
 | [`tools/planet_scale.py`](tools/planet_scale.py) | التحويل `θ=P÷s`، والمقياس الطبيعى `s=1/v` لكل كوكب، وهُوية «نقطة = يوم»، وشهادة القهوة (1.0017)، واختبار القُطر مقابل خارج القطر — §24 من `04` |
 | [`tools/scale_holdout.py`](tools/scale_holdout.py) | **الاختبار الحاسم**: المقياس المشتق على كل الأسهم، وبحثٌ عن مقياس لكل سهم (200 قيمة) يُدرَّب على 1998–2018 ويُقرأ على 2019–2025 — [`docs/06`](docs/06-price-planet-scale.md) |
+| [`tools/stock_planet_binding.py`](tools/stock_planet_binding.py) | **ربط السهم بكوكب**: ثلاثة اختبارات خارج العينة (كوكب · كوكبان · بمقياس مشتق) + كشف فخّ «الدقّة» + إعادة على نافذة مستقلة تُسقط الأثر + **قاعدة العلامة (الرقم لا علامة له)**: أربع قراءات لا لانهاية، وضابط نقل الخيار إلى سهمٍ آخر — [`docs/06`](docs/06-price-planet-scale.md) §8.7 |
+| [`tools/circle_one_stock.py`](tools/circle_one_stock.py) | **مثال كامل على سهم واحد**: قاع رئيسى لا فرعى · الرقم بلا علامة · خمس قراءات × ثلاثة معدلات (÷1 ÷12 ÷30) · النسبة مع الكواكب — [`docs/06`](docs/06-price-planet-scale.md) §9 |
 
 ---
 
