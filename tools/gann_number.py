@@ -259,6 +259,9 @@ def main() -> None:
         print(f"درجة الزمن: {s['time_deg']:+.3f}°")
         print(f"السرعة: {s['speed']:+.4f}  — {s['label']}")
         return
+    if not args or args[0] in ("-h", "--help"):
+        print(__doc__.strip().split("\n\n")[-1])
+        return
     n = float(args[0])
     total = total_degrees(n)
     print(f"الموضع على الدائرة : {total % 360.0:.4f}°")
