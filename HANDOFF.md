@@ -236,6 +236,7 @@ docs/14-biblical-time.md       ★ الزمن الكتابى: تك ١:١٤ · د
 docs/15-harmonic-sources.md    ★ المصادر الثلاثة: ١٦٦٧ · Heath · Concord-Cushing · والأداتان
 docs/16-degree-cycle.md       ★ الشمعة الفلكية: ٣٦٠ درجة/دورة · تعبئة العطل · والاختبار
 docs/17-gann-method.md        ★ منهج جان من نصّه المصوَّر: الخطوات الأربع · والشمس ساعة
+docs/18-technical-foundations.md  ★ أصول التحليل الفنى · القاع الرئيسى والفرعى
 docs/sources/times-of-the-bible-1667-en.txt  ★ نصّ ١٦٦٧ الإنجليزى (٧٨ ص) — **يُقتبس** ويُقفل آليًّا
 docs/sources/times-of-the-bible-1667.txt     النسخة العربية الآلية — للمقارنة لا للاقتباس
 README.md                     الخريطة والصفوف
@@ -260,6 +261,7 @@ README.md                     الخريطة والصفوف
 | `synodic_cycle.py` | ★ دورة العشرين (المشترى–زحل ١٩.٨٦ سنة) · طورٌ سينودى يومى · النقاط الأربع · **الطور ≡ التقويم** | `python3 tools/synodic_cycle.py` |
 | `stock_frequency.py` | ★ مسح تردد كل سهم · ضابطٌ يحفظ الطيف · نطاقان · **٠/١٢ خارج العيّنة** | `python3 tools/stock_frequency.py` |
 | `price_time_square.py` | ★ الخطوات الأربع من خطاب ١٩٥٤ · إرساء على قاع · درجات غير مختزلة · الشمس مقابل الزمن | `python3 tools/price_time_square.py` |
+| `gann_pivots.py` | ★ عشرة شروط من النصّ · ١ وحدة سعر = ١٥° · قاع رئيسى/فرعى · تجاور · حملات | `python3 tools/gann_pivots.py` |
 
 **`circle_one_stock.py` يقبل:** `--factor` (لتقدير السعر الخام) · `--money` (الوحدة قرش) · `--from` (للفصل عن مقطع معدَّل) · `--bottom` · `--major 0.40`.
 
