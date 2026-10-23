@@ -1,7 +1,7 @@
 # HANDOFF — برومبت الوكيل التالى
 
 > **هذا ملفُ تسليمٍ لا بحث.** اقرأه كاملًا قبل أى أداة. فيه: ما ثبت، وما سقط، وما لا يُعاد،
-> والبيئة التى تُصفَّر. المستودع: `hanybhenan-creator/Q2` · الفرع: **`arena/f18907ba-q2`** · HEAD: **`0cf5f34`**.
+> والبيئة التى تُصفَّر. المستودع: `hanybhenan-creator/Q2` · الفرع: **`arena/f18907ba-q2`** · HEAD: **`1af07a0`** (مدمجٌ فى `main`).
 
 ---
 
@@ -57,21 +57,22 @@ git reset --mixed origin/arena/f18907ba-q2
 
 ### إعادة بناء البيانات (مطلوبة دائمًا بعد التصفير)
 
-الملفات **ليست** فى شجرة الفرع، بل **كائناتٌ يتيمة فى تاريخ Git**. تُستخرج هكذا:
+**الأرشيف صار فى شجرة المستودع نفسه** — ثمانية أجزاء `market last price_part01..08.TXT` (169 ميجا)
+وخطابات جان الثلاثة (`May Coffee Astro Letter` · `Soy Beans Astro Letter` · `Astro Charts`).
+**لا تطلبها من المستخدم؛ هى فى المستودع.** وتُبنى هكذا:
 
 ```bash
-mkdir -p /tmp/egxdata
-for i in 01 02 03 04 05 06 07 08; do
-  h=$(git rev-list --objects --all | grep "market last price_part$i.TXT" | awk '{print $1}')
-  git cat-file -p "$h" > "/tmp/egxdata/part$i.csv"
-done
+cd /home/user/Q2
+for i in 01 02 03 04 05 06 07 08; do cp "market last price_part$i.TXT" "/tmp/egxdata/part$i.csv"; done
 python3 tools/egx_load.py --dir /tmp/egxdata --out /tmp/egx_clean.csv
 # ⇒ 960,600 صفًا · 286 سهمًا · 1998-01-01 → 2025-10-27
 ```
 
-**والملفات المرفوعة (`/tmp/arena-coding-uploads/`) قد تضيع أيضًا:** فيها خطابات جان الثلاثة
-(`May Coffee Astro Letter` · `Soy Beans Astro Letter` · `Astro Charts`) بالصور. **إن ضاعت، اطلبها من المستخدم.**
-ولا تدّعِ قراءتها إن لم تكن موجودة.
+**(وإن لم تكن الملفات فى نسختك، فاستخرجها من كائنات Git: `git rev-list --objects --all | grep part01`.)**
+
+**والخطابات PDF مصوّرة:** طبقةُ نصّها ~292 حرفًا فقط، فتُقرأ **بالعين** بعد تحويلها صورًا
+(`pypdf` + `Pillow`: `pip install --break-system-packages --user pypdf pillow`).
+**ولا تدّعِ قراءتها إن لم تُحوّلها فعلًا.**
 
 ---
 
@@ -176,3 +177,29 @@ README.md                     الخريطة والصفوف
 1. **المحرّك الفلكى سليم، وأرقام جان صحيحة** — وقد أثبتنا ذلك مقابل السوق لا مقابل كلامه.
 2. **الذى يسقط دائمًا هو المطابقة**: لا ربطٌ بسهم، ولا ربطٌ بكوكب، ولا 1×1 على الأسهم المصرية.
 3. **وما يوقف الحساب الآن ليس الفلك، بل أن الأرشيف لا يحمل أسعار السوق.** اطلب سعرًا خامًّا واحدًا، وابدأ منه.
+
+---
+
+## ٩. أين تجد كل شىء على GitHub
+
+```
+github.com/hanybhenan-creator/Q2
+├── HANDOFF.md                     ← ابدأ من هنا (هذا الملف)
+├── README.md                      ← الخريطة
+├── docs/01..07                    ← الوثائق (06 هو الجارى)
+├── tools/                         ← 23 أداة، كلها تعمل
+├── market last price_part01..08.TXT   ← الأرشيف الخام (169 ميجا · 960,600 صف)
+└── Gann, WD - *.pdf               ← خطابا جان + Astro Charts (PDF مصوَّر)
+```
+
+**والفرع `main` صار يحوى كل هذا.** فمن فتح المستودع يجد الوثائق والأدوات والبيانات معًا،
+ولا يحتاج شيئًا من المحادثة السابقة.
+
+**وأوّل أمرين تنفّذهما:**
+
+```bash
+cd /home/user/Q2 && git log --oneline -1        # 1af07a0
+python3 tools/price_integrity.py --csv /tmp/egx_clean.csv   # بعد بناء الـcsv
+```
+
+**ثم:** `python3 tools/circle_one_stock.py --csv /tmp/egx_clean.csv --ticker TMGH --money`
