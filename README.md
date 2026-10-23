@@ -128,6 +128,7 @@
 | [`tools/degree_cycle.py`](tools/degree_cycle.py) | **دورة الدرجة**: طور كل دورة · Rayleigh بضابط تبديل · تفكيك أفقى/رأسى · خارج العيّنة · فرضية ٩٠/٢٧٠ — [`docs/16`](docs/16-degree-cycle.md) |
 | [`tools/degree_profile.py`](tools/degree_profile.py) | **شكل المنحنى**: أثرية ٠/١٨٠ · نصيب التوافقيات **مقابل مسيرة عشوائية** · فخّ الضابط الضعيف · R² خارج العيّنة · جدوى زحل/المشترى — [`docs/16`](docs/16-degree-cycle.md) |
 | [`tools/synodic_cycle.py`](tools/synodic_cycle.py) | **دورة العشرين**: المشترى–زحل ‎19.86‎ سنة · طورٌ سينودى لكل جلسة · النقاط الأربع ٠/٩٠/١٨٠/٢٧٠ · **وإثبات أن الطور ≡ التقويم** — [`docs/16`](docs/16-degree-cycle.md) |
+| [`tools/stock_frequency.py`](tools/stock_frequency.py) | **تردّد كل سهم**: مسح طيفى كامل ٣٠°–١٨٠٠° · ضابطٌ يحفظ الطيف · **النتيجة: ٠/١٢ خارج العيّنة** — [`docs/16`](docs/16-degree-cycle.md) |
 
 ---
 
