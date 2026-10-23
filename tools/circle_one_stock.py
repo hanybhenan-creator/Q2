@@ -122,6 +122,7 @@ def main():
     ap.add_argument("--minor", type=float, default=0.25)
     ap.add_argument("--factor", type=float, default=1.0,
                     help="عامل تحويل السلسلة المعدَّلة إلى السعر الخام (سوق)")
+    ap.add_argument("--from", dest="dfrom", help="ابدأ من هذا التاريخ (للفصل عن المقطع المعدَّل)")
     ap.add_argument("--money", action="store_true",
                     help="الوحدة قرش: الرقم = السعر × 100")
     ns = ap.parse_args()
@@ -129,7 +130,11 @@ def main():
     data = load(ns.csv)
     if ns.ticker not in data:
         sys.exit(f"السهم {ns.ticker} ليس فى الأرشيف")
-    v = {d: tuple(x * ns.factor for x in t) for d, t in data[ns.ticker].items()}
+    src = {d: t for d, t in data[ns.ticker].items()
+           if not ns.dfrom or d >= ns.dfrom}
+    if not src:
+        sys.exit("لا صفوف فى هذا النطاق")
+    v = {d: tuple(x * ns.factor for x in t) for d, t in src.items()}
     if ns.factor != 1.0:
         print(f"\n⚠ السلسلة معدَّلة — ضُربت فى {ns.factor:g} لتقدير السعر الخام.")
     dates = list(v)

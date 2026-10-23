@@ -66,7 +66,7 @@
 | **مقياس كل كوكب** | `θ = P ÷ s` · و`s = 1/v = الدورة÷360` · و1 و12 و30 هى الشمس‑المشترى‑زحل · وكلها تعنى «نقطة = يوم» فتُلغى من الطرفين — §24 من `04` |
 | **المقياس — الاختبار الحاسم** | `s = 1/v` يُطبَّق على 253 سهمًا: **20.0/19.7/19.7/17.4/19.6%** مقابل صدفة **20.0%** · والبحث عن مقياس لكل سهم: 26.8% تدريبًا ← **19.8%** تحقّقًا — [`docs/06`](docs/06-price-planet-scale.md) |
 | آلات تطوير الأفكار | ست أدوات مقيَّمة في §16 من `03`: `stumpy` · `ruptures` · `alphalens` · `skill-backtest-overfit` · `purged-CV` · مرجع الكواكب |
-| الكود | اثنان وعشرون ملفًا في `tools/`: عشرة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude` · `mikula_verify` · `heliocentric_law` · `moon_price` · `gann_letters` · `planet_scale` · `scale_holdout` · `letter_keys`)، واثنا عشر للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles` · `holdout` · `stock_planet_binding` · `circle_one_stock`) |
+| الكود | ثلاثة وعشرون ملفًا في `tools/`: عشرة للتحقق الفلكى (`astro_conjunctions` · `gann_number` · `mikula_price_longitude` · `mikula_verify` · `heliocentric_law` · `moon_price` · `gann_letters` · `planet_scale` · `scale_holdout` · `letter_keys`)، وثلاثة عشر للأرشيف (`egx_load` · `egx_calendar` · `egx_pair_control` · `egx_astro_test` · `egx_activity_rotation` · `egx_selection_rule` · `egx_pulse` · `gann_sieve` · `gann_cycles` · `holdout` · `stock_planet_binding` · `circle_one_stock` · `price_integrity`) |
 
 ---
 
@@ -107,6 +107,7 @@
 | [`tools/scale_holdout.py`](tools/scale_holdout.py) | **الاختبار الحاسم**: المقياس المشتق على كل الأسهم، وبحثٌ عن مقياس لكل سهم (200 قيمة) يُدرَّب على 1998–2018 ويُقرأ على 2019–2025 — [`docs/06`](docs/06-price-planet-scale.md) |
 | [`tools/stock_planet_binding.py`](tools/stock_planet_binding.py) | **ربط السهم بكوكب**: ثلاثة اختبارات خارج العينة (كوكب · كوكبان · بمقياس مشتق) + كشف فخّ «الدقّة» + إعادة على نافذة مستقلة تُسقط الأثر + **قاعدة العلامة (الرقم لا علامة له)**: أربع قراءات لا لانهاية، وضابط نقل الخيار إلى سهمٍ آخر — [`docs/06`](docs/06-price-planet-scale.md) §8.7 |
 | [`tools/circle_one_stock.py`](tools/circle_one_stock.py) | **مثال كامل على سهم واحد**: قاع رئيسى لا فرعى · الرقم بلا علامة · خمس قراءات × ثلاثة معدلات (÷1 ÷12 ÷30) · النسبة مع الكواكب — [`docs/06`](docs/06-price-planet-scale.md) §9 |
+| [`tools/price_integrity.py`](tools/price_integrity.py) | **فحص سلامة السلسلة**: بصمة المنازل العشرية تكشف السلسلة المعدَّلة بلا مصدر خارجى · 28 سهمًا خامٌ من 286 · وقائمة الأنقى (14) — [`docs/06`](docs/06-price-planet-scale.md) §13 |
 
 ---
 
